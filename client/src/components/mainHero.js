@@ -1,26 +1,66 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import pizzaLeft from '../images/pizzaMainLeft.png'
-import pizzaRight from '../images/pizzaMainRight.png'
-import mrzMain from '../images/mrZ_main.png'
+import pizzaLeft from '../images/pizzaMainLeft.png';
+import pizzaRight from '../images/pizzaMainRight.png';
+import mrzMain from '../images/mrZ_main.png';
+import food from '../images/food.png';
 
 
 
 const MainHero = () => {
     return (
-        <div className='bg-[#3d3d3d]'>
+        <Backplate>
             <div className='flex flex-col items-center pt-24'>
                 <img src={mrzMain} alt="mrZ" style={{maxWidth:"30%"}}/>
-                <p className='text-white fotn-bebas font-bold'>GREAT PIZZA, BEERS AND FRIENDS</p>
-                <button className='bg-[#ff9e16] px-4 py-2 rounded-lg 
-                mt-12 font-bebas font-bold text-2xl shadow-lg shadow-[#ff9e16]'>ORDER ONLINE</button>
+                <Text >
+                    <p>GREAT FOOD, BEERS AND FRIENDS</p>
+                </Text>
+                <OrderButton>ORDER ONLINE</OrderButton>
             </div>
-            <div className='flex justify-between mb-0'>
+            <Pizzas>
                 <img src={pizzaLeft} alt="Pizza"  style={{maxWidth:"30%"}}/>
                 <img src={pizzaRight} alt="Pizza"  style={{maxWidth:"30%"}}/>
-            </div>
-        </div>
+            </Pizzas>
+        </Backplate>
     )
 }
 
 export default MainHero;
+
+const Backplate = styled.div`
+    background-image:url(${food});  
+    background-position:center;
+    background-color: #3d3d3d;
+    overflow: hidden;
+`
+
+const Text = styled.div`
+    color: white;
+    font-family: 'Bebas Neue';
+
+    p {
+        font-size:2.2vw; //text size adaptative format
+    }
+`
+
+const OrderButton = styled.button`
+    background-color: #ff9e16;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 14px 1px #ff9e16;
+    font-family: 'Bebas Neue';
+    font-size: 2.4vw;
+    font-weight: bold;
+
+    :hover {
+        box-shadow: 4px 4px 14px 8px #ff9e16;
+    }
+
+`
+
+const Pizzas = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
