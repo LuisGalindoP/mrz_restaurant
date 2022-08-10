@@ -8,7 +8,7 @@ module.exports = {
       'sans': ['ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
-      'bebas': ['Bebas Neue']
+      'bebas': ['Bebas Neue'],
     },
     // extend: {},
   },

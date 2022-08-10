@@ -55,7 +55,7 @@ const MenuElement = styled.div`
         margin-right: 20px;
         color: white;
         p {
-            font-family: 'Bebas Neue';
+            font-family: hwt-artz, sans-serif;
             font-size: 26px;
             padding: 0px 6px;
             border: 2px solid rgba(255,255,255,0);
@@ -69,7 +69,7 @@ const MenuElement = styled.div`
     }
     @media only screen and (max-width: 600px) {
         color: white;
-        font-family: 'Bebas Neue';
+        font-family: hwt-artz, sans-serif;
         font-size: 16px;
         padding: 0px 6px;
         border: 2px solid rgba(255,255,255,0);
