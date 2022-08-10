@@ -40,7 +40,7 @@ const Text = styled.div`
     font-family: 'Bebas Neue';
 
     p {
-        font-size:2.2vw; //text size adaptative format
+        font-size:4vw; //text size adaptative format
     }
 `
 
@@ -51,9 +51,10 @@ const OrderButton = styled.button`
     border-radius: 10px;
     box-shadow: 4px 4px 14px 1px #ff9e16;
     font-family: 'Bebas Neue';
-    font-size: 2.4vw;
+    /* font-size: 2.4vw; */
+    font-size:calc(12px + 1.5vw);
     font-weight: bold;
-
+    border: solid;
     :hover {
         box-shadow: 4px 4px 14px 8px #ff9e16;
     }
