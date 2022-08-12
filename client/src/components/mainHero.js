@@ -16,7 +16,8 @@ const MainHero = () => {
                 <Text >
                     <p>GREAT FOOD, BEERS AND FRIENDS</p>
                 </Text>
-                <OrderButton>ORDER ONLINE</OrderButton>
+                <a href="https://mrzsrestaurant.e-tab.com/mrzsrestaurant#!/order-type"><OrderButton>ORDER ONLINE</OrderButton></a>
+                
             </div>
             <Pizzas>
                 <img src={pizzaLeft} alt="Pizza"  style={{maxWidth:"30%"}}/>
@@ -33,6 +34,10 @@ const Backplate = styled.div`
     background-position:center;
     background-color: #3d3d3d;
     overflow: hidden;
+    /* @keyframes backgroundRotation {
+        from {transfrom: rotate(0deg)}
+        to {}
+    } */
 `
 
 const Text = styled.div`

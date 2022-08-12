@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 import safePizza from '../images/safePizza.png'
@@ -8,6 +8,7 @@ import backgroundWhite from '../images/background_white.jpg'
 import backgroundGray from '../images/background_gray.jpg'
 import pizzaGroup from '../images/pizza_group.png'
 import pizzaSection from '../images/pizza_section.png'
+
 
 const MenuElements = () => {
     return (
@@ -86,12 +87,28 @@ padding-left: 10%;
 padding-right: 10%;
 /* background-color: white; */
 background-image: url(${backgroundWhite});
+background-repeat: repeat;
 color: #2d2d28;
 display: flex;
 justify-content: center;
 gap: 10%;
+-webkit-animation: backgroundScroll 15s linear 1; 
+-webkit-animation-fill-mode: forwards;//THIS IS ONLY FOR OLD BROWSERS
+animation: backgroundScroll 15s linear 1;
+animation-fill-mode: forwards;
+/* EXPLANATION FOR THE ANIMATION PART: https://www.tothenew.com/blog/moving-background-image-using-css/ */
+    @-webkit-keyframes backgroundScroll {
+        from {background-position: 0 0;}
+        to {background-position: -180px 0px;}
+    }
+
+    @keyframes backgroundScroll {
+        from {background-position: 0 0;}
+        to {background-position: -180px 0px;}
+        
+    }   
     p {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: black;
     margin-bottom: 12px;
     margin-top:8px;
@@ -108,13 +125,28 @@ background-image: url(${backgroundGray});
 display: flex;
 justify-content: center;
 gap: 5%;
+-webkit-animation: backgroundScroll 60s linear 1;//THIS IS ONLY FOR OLD BROWSERS
+-webkit-animation-fill-mode: forwards;//THIS IS ONLY FOR OLD BROWSERS
+animation: backgroundScroll 15s linear 1;
+animation-fill-mode: forwards;
+/* EXPLANATION FOR THE ANIMATION PART: https://www.tothenew.com/blog/moving-background-image-using-css/ */
+    @-webkit-keyframes backgroundScroll {
+        from {background-position: 0 0;}
+        to {background-position: -180px 0px;}
+    }
+
+    @keyframes backgroundScroll {
+        from {background-position: 0 0;}
+        to {background-position: -180px 0px;}
+        
+    }   
     p {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: white;
     margin-bottom: 12px;
     margin-top:8px;
     /* font-weight: bold; */
-    }
+}
 `
 
 const TitleText = styled.div `
