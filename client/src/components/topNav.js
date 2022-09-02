@@ -1,19 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
+
 import mrzMain from '../images/mrZ_main.png'
 
 const TopNav = () => {
     return (
         <NavigationBar>
             <LogoMenu>
-                <img src={mrzMain} alt="Mr Z" />
+                <Link to="/" ><img src={mrzMain} alt="Mr Z" /></Link>
             </LogoMenu>
             <MenuElement>
-                <p >MENU</p>
-                <p >LOCATIONS</p>
+                <Link to="/menu"><p >MENU</p></Link>
+                <Link to="/locations"><p >LOCATIONS</p></Link>
                 <p >ORDER ONLINE</p>
-                <p >GIFT CARDS</p>
-                <p >JOBS</p>
+                <Link to="/giftcards"><p >GIFT CARDS</p></Link>
+                <Link to="/jobs"><p >JOBS</p></Link>
             </MenuElement>
         </NavigationBar>
     )
